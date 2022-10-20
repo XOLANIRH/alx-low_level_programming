@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * print _alphabet - prints the alpha in lowercases
+ * print_alphabet - entry point
+ *
  */
 void print_alphabet(void)
 {
