@@ -5,7 +5,7 @@
  *
  * print_alphabet_x10 -prints alpha 10 times
  */
-void print_alphebet_x10(void)
+void print_alphabet_x10(void)
 {
 	int ten;
 	char la;
