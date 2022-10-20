@@ -2,7 +2,7 @@
 
 /**
  * _isupper - checks if a character is uppercase
- * @c: Variable text
+ * @c: input
  * Return: Always 0
  */
 
