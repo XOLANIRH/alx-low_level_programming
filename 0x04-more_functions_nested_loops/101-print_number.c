@@ -31,7 +31,7 @@ void print_number(int n)
 
 	while (num >= 0)
 	{
-		if (m == 0)
+		if (m == 1)
 		{
 			_putchar(num % 10 + '0');
 			num = -1;
