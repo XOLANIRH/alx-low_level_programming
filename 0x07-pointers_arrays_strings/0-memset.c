@@ -3,19 +3,20 @@
 /**
  * _memset - Fils te first n bytes
  * @s: A pointer the memory area
- * @c: The charactder to fill the memory
- * @n: The number of bytes
+ * @b: constant byte that wil be written
+ * @n: amount of times the byte
  * description _memset: over there
- * Return: A pointer
+ * Return: Address of the memory
  */
 
-void *_memset(void *s, int c, size_t n)
+void *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int index;
-	unsigned char *memory = s, value = c;
+	unsigned int i;
 
-	for (index = 0; index < n; index++)
-		memory[index] = value;
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
 
-	return (memory);
+	return (s);
 }
