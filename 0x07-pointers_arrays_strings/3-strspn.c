@@ -2,6 +2,7 @@
 
 /**
  * _strspn - gets the length of a prefix substring
+ * @s: pointer that contains the string to be evaluated
  * @accept: pointer that contains the substring that will condition s
  * Return: length of s which contains characters in accept
  */
