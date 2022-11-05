@@ -12,42 +12,35 @@
 
 int main(int argc, char *argv[])
 {
-	int values[] = {25, 10, 5, 2, 1}, i, j, result = 0, n;
+	int position, total, change, aux;
+	int coins[] = {25, 10, 5, 2, 1};
 
-	if (argc == 2)
-	{
-		n = atoi(argv[1]);
-		for (i = 0; i < 5; i++)
-		{
-			if (n < 0)
-			{
-				printf("0");
-				return (0);
-			}
-			if (n == 0)
-			{
-				printf("%d\n", result);
-				return (0);
-			}
-			if (values[i] <= n)
-			{
-				result += n / values[i];
-				n = abs(n - (values[i] * result));
-			}
-			for (j = 0; j < 5; j++)
-			{
-				if (n == values[j])
-				{
-					result += 1;
-					n = 0;
-				}
-			}
-		}
-		printf("%d\n", result);
-	} else
+	position = total = change = aux = 0;
+
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	total = atoi(argv[1]);
+
+	if (total <= 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	while (coins[position] != '\0')
+	{
+		if (total >= coins[position])
+		{
+			aux = (total / coins[position]);
+			change += aux;
+			total -= coins[position] * aux;
+		}
+		position++;
+	}
+	printf("%d\n", change);
 	return (0);
 }
