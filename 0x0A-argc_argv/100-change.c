@@ -33,8 +33,10 @@ int coinConverter(int i)
 		}
 		else
 			i -= 1;
+
 		count++;
 	}
+
 	return (count);
 }
 
@@ -57,6 +59,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+
 	i = atoi(argv[1]);
 
 	if (i < 0)
@@ -64,7 +67,9 @@ int main(int argc, char *argv[])
 	else
 	{
 		coin = coinConverter(i);
+
 		printf("%d\n", coin);
 	}
+
 	return (0);
 }
